@@ -9,17 +9,23 @@
         System.out.println("isPrim(500) = " + isPrim(500));
 
         int checkNumbers = 2;
-        while (checkNumbers <= 1234){
+        while (checkNumbers <= 1234){ //Abbruchbedingung noch nicht sicher evtl. variable auf falsch gesetzt im code etc.
             if (isPrim(checkNumbers)){
                 System.out.print(checkNumbers + ", ");
             }
             checkNumbers ++;
         }
+
+        //for(initialisierung; bedingung; increment)
+        /*for(int i = 1; i < 1000; i++){ //verwendet strikt hochgezählt wird
+
+        }
+        */
     }
     public static boolean isPrim (int number){
         int checkValue = 2;
         // boolean checkIsPrim = true;
-        while (checkValue < number){
+        while (checkValue < number / 2){ //Code optimierung nur bis zu hälfte wird gerechnet oder über Wurzel mit Math.sqrt(number))
             if (number % checkValue == 0){
                 //checkIsPrim = false;
                 //break;//bricht Schleife ab
