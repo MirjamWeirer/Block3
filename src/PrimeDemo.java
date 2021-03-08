@@ -22,18 +22,25 @@
         }
         */
     }
-    public static boolean isPrim (int number){
-        int checkValue = 2;
+    public static boolean isPrim (int number) {
+        //int checkValue = 2;
         // boolean checkIsPrim = true;
-        while (checkValue < number / 2){ //Code optimierung nur bis zu hälfte wird gerechnet oder über Wurzel mit Math.sqrt(number))
+        /*while (checkValue < number / 2){ //Code optimierung nur bis zu hälfte wird gerechnet oder über Wurzel mit Math.sqrt(number))
             if (number % checkValue == 0){
                 //checkIsPrim = false;
                 //break;//bricht Schleife ab
                 return false; //Bricht schleife ab
             }
             checkValue ++;
+         }
+        */
+        for (int checkValue = 2; checkValue < number / 2; checkValue++) {
+            if (number % checkValue == 0) {
+                return false;
+            }
         }
+
         //return checkIsPrim;
-        return  true;
+        return true;
     }
 }
